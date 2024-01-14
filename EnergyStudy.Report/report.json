@@ -1,0 +1,132 @@
+{
+  "config": "{\"version\":\"5.47\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU08\",\"version\":\"5.48\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU08",
+            "path": "BaseThemes/CY23SU08.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"2c3ae241a8233c620acb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.690964312832195,\"y\":11.662870159453304,\"z\":0,\"width\":107.88154897494306,\"height\":497.61579347000765}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Calendar.Year\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calendar\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Year\"},\"Name\":\"Calendar.Year\",\"NativeReferenceName\":\"Year\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"items\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 497.62,
+          "width": 107.88,
+          "x": 10.69,
+          "y": 11.66,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"3bb32d057680eec9c20a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":183.69020501138954,\"y\":0,\"z\":1000,\"width\":741.564160971906,\"height\":471.3743356112377}}],\"singleVisual\":{\"visualType\":\"areaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"antarctic-ozone-hole-area.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(antarctic-ozone-hole-area.Maximum ozone hole area)\"}],\"Y2\":[{\"queryRef\":\"Sum(antarctic-ozone-hole-area.Mean ozone hole area)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"antarctic-ozone-hole-area\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Year\"},\"Name\":\"antarctic-ozone-hole-area.Year\",\"NativeReferenceName\":\"Year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Maximum ozone hole area\"}},\"Function\":0},\"Name\":\"Sum(antarctic-ozone-hole-area.Maximum ozone hole area)\",\"NativeReferenceName\":\"Sum of Maximum ozone hole area\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Mean ozone hole area\"}},\"Function\":0},\"Name\":\"Sum(antarctic-ozone-hole-area.Mean ozone hole area)\",\"NativeReferenceName\":\"Sum of Mean ozone hole area\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Maximum ozone hole area\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 471.37,
+          "width": 741.56,
+          "x": 183.69,
+          "y": 0.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 3",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection073e42fda4cae768215a",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"2d3fc6d50b0c5807a810\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1044.7987851176918,\"height\":651.1769172361428,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineClusteredColumnComboChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Calendar.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(owid-co2-data.co2_per_capita)\"},{\"queryRef\":\"Sum(owid-co2-data.consumption_co2_per_capita)\"},{\"queryRef\":\"Sum(owid-co2-data.co2_including_luc_per_capita)\"},{\"queryRef\":\"Sum(owid-co2-data.methane_per_capita)\"},{\"queryRef\":\"Sum(owid-co2-data.other_co2_per_capita)\"},{\"queryRef\":\"Sum(owid-co2-data.oil_co2_per_capita)\"},{\"queryRef\":\"Sum(owid-co2-data.coal_co2_per_capita)\"},{\"queryRef\":\"Sum(owid-co2-data.cement_co2_per_capita)\"}],\"Y2\":[{\"queryRef\":\"Max(owid-co2-data.population)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"owid-co2-data\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"Calendar\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Year\"},\"Name\":\"Calendar.Year\",\"NativeReferenceName\":\"Year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"co2_per_capita\"}},\"Function\":0},\"Name\":\"Sum(owid-co2-data.co2_per_capita)\",\"NativeReferenceName\":\"Owid CO2\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"consumption_co2_per_capita\"}},\"Function\":0},\"Name\":\"Sum(owid-co2-data.consumption_co2_per_capita)\",\"NativeReferenceName\":\"Sum of consumption_co2_per_capita\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"population\"}},\"Function\":4},\"Name\":\"Max(owid-co2-data.population)\",\"NativeReferenceName\":\"Max of population\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"co2_including_luc_per_capita\"}},\"Function\":0},\"Name\":\"Sum(owid-co2-data.co2_including_luc_per_capita)\",\"NativeReferenceName\":\"Incl. Land Use\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"methane_per_capita\"}},\"Function\":0},\"Name\":\"Sum(owid-co2-data.methane_per_capita)\",\"NativeReferenceName\":\"Sum of methane_per_capita\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"other_co2_per_capita\"}},\"Function\":0},\"Name\":\"Sum(owid-co2-data.other_co2_per_capita)\",\"NativeReferenceName\":\"Sum of other_co2_per_capita\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"oil_co2_per_capita\"}},\"Function\":0},\"Name\":\"Sum(owid-co2-data.oil_co2_per_capita)\",\"NativeReferenceName\":\"Sum of oil_co2_per_capita\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"coal_co2_per_capita\"}},\"Function\":0},\"Name\":\"Sum(owid-co2-data.coal_co2_per_capita)\",\"NativeReferenceName\":\"Sum of coal_co2_per_capita\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"cement_co2_per_capita\"}},\"Function\":0},\"Name\":\"Sum(owid-co2-data.cement_co2_per_capita)\",\"NativeReferenceName\":\"Sum of cement_co2_per_capita\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"co2_per_capita\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(owid-co2-data.co2_per_capita)\":{\"displayName\":\"Owid CO2\"},\"Sum(owid-co2-data.co2_including_luc_per_capita)\":{\"displayName\":\"Incl. Land Use\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Calendar\"}},\"Property\":\"Year\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calendar\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":2,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Year\"}},\"Right\":{\"Literal\":{\"Value\":\"1900L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false},{\"name\":\"Filter024fbff445320e70b590\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"owid-co2-data\"}},\"Property\":\"country\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"owid-co2-data\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"country\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Africa'\"}}],[{\"Literal\":{\"Value\":\"'Africa (GCP)'\"}}],[{\"Literal\":{\"Value\":\"'Asia (excl. China and India)'\"}}],[{\"Literal\":{\"Value\":\"'Asia (GCP)'\"}}],[{\"Literal\":{\"Value\":\"'Central African Republic'\"}}],[{\"Literal\":{\"Value\":\"'Central America (GCP)'\"}}],[{\"Literal\":{\"Value\":\"'Europe'\"}}],[{\"Literal\":{\"Value\":\"'Europe (excl. EU-27)'\"}}],[{\"Literal\":{\"Value\":\"'Europe (excl. EU-28)'\"}}],[{\"Literal\":{\"Value\":\"'Europe (GCP)'\"}}],[{\"Literal\":{\"Value\":\"'European Union (27)'\"}}],[{\"Literal\":{\"Value\":\"'European Union (27) (GCP)'\"}}],[{\"Literal\":{\"Value\":\"'European Union (28)'\"}}],[{\"Literal\":{\"Value\":\"'French West Africa (GCP)'\"}}],[{\"Literal\":{\"Value\":\"'French West Africa (Jones et al. 2023)'\"}}],[{\"Literal\":{\"Value\":\"'High-income countries'\"}}],[{\"Literal\":{\"Value\":\"'International transport'\"}}],[{\"Literal\":{\"Value\":\"'Kuwaiti Oil Fires (GCP)'\"}}],[{\"Literal\":{\"Value\":\"'Kuwaiti Oil Fires (Jones et al. 2023)'\"}}],[{\"Literal\":{\"Value\":\"'Least developed countries (Jones et al. 2023)'\"}}],[{\"Literal\":{\"Value\":\"'Leeward Islands (GCP)'\"}}],[{\"Literal\":{\"Value\":\"'Leeward Islands (Jones et al. 2023)'\"}}],[{\"Literal\":{\"Value\":\"'Lower-middle-income countries'\"}}],[{\"Literal\":{\"Value\":\"'Low-income countries'\"}}],[{\"Literal\":{\"Value\":\"'Middle East (GCP)'\"}}],[{\"Literal\":{\"Value\":\"'Non-OECD (GCP)'\"}}],[{\"Literal\":{\"Value\":\"'North America'\"}}],[{\"Literal\":{\"Value\":\"'North America (excl. USA)'\"}}],[{\"Literal\":{\"Value\":\"'North America (GCP)'\"}}],[{\"Literal\":{\"Value\":\"'Oceania (GCP)'\"}}],[{\"Literal\":{\"Value\":\"'OECD (GCP)'\"}}],[{\"Literal\":{\"Value\":\"'OECD (Jones et al. 2023)'\"}}],[{\"Literal\":{\"Value\":\"'Panama Canal Zone (GCP)'\"}}],[{\"Literal\":{\"Value\":\"'Panama Canal Zone (Jones et al. 2023)'\"}}],[{\"Literal\":{\"Value\":\"'Ryukyu Islands (GCP)'\"}}],[{\"Literal\":{\"Value\":\"'Ryukyu Islands (Jones et al. 2023)'\"}}],[{\"Literal\":{\"Value\":\"'St. Kitts-Nevis-Anguilla (GCP)'\"}}],[{\"Literal\":{\"Value\":\"'St. Kitts-Nevis-Anguilla (Jones et al. 2023)'\"}}],[{\"Literal\":{\"Value\":\"'Upper-middle-income countries'\"}}],[{\"Literal\":{\"Value\":\"'Western Sahara'\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}]",
+          "height": 651.18,
+          "width": 1044.80,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"5bf873a407b1b468077b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1130,\"y\":0,\"width\":150,\"height\":651.2906220984215,\"z\":1000,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"owid-co2-data.country\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"owid-co2-data\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"country\"},\"Name\":\"owid-co2-data.country\",\"NativeReferenceName\":\"country\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 651.29,
+          "width": 150.00,
+          "x": 1130.00,
+          "y": 0.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 2",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection5f396eed9346152b170c",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"393ddcc3a650acbc01a9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":776.0817084493965,\"height\":634.6518105849582,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"stackedAreaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"population-by-age-group.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(population-by-age-group.Population by broad age group - Sex: all - Age: 0-4 - Variant: estimates)\"},{\"queryRef\":\"Sum(population-by-age-group.Population by broad age group - Sex: all - Age: 5-14 - Variant: estimates)\"},{\"queryRef\":\"Sum(population-by-age-group.Population by broad age group - Sex: all - Age: 15-24 - Variant: estimates)\"},{\"queryRef\":\"Sum(population-by-age-group.Population by broad age group - Sex: all - Age: 25-64 - Variant: estimates)\"},{\"queryRef\":\"Sum(population-by-age-group.Population by broad age group - Sex: all - Age: 65+ - Variant: estimates)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"population-by-age-group\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Year\"},\"Name\":\"population-by-age-group.Year\",\"NativeReferenceName\":\"Year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Population by broad age group - Sex: all - Age: 0-4 - Variant: estimates\"}},\"Function\":0},\"Name\":\"Sum(population-by-age-group.Population by broad age group - Sex: all - Age: 0-4 - Variant: estimates)\",\"NativeReferenceName\":\"0-4\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Population by broad age group - Sex: all - Age: 5-14 - Variant: estimates\"}},\"Function\":0},\"Name\":\"Sum(population-by-age-group.Population by broad age group - Sex: all - Age: 5-14 - Variant: estimates)\",\"NativeReferenceName\":\"5-14\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Population by broad age group - Sex: all - Age: 15-24 - Variant: estimates\"}},\"Function\":0},\"Name\":\"Sum(population-by-age-group.Population by broad age group - Sex: all - Age: 15-24 - Variant: estimates)\",\"NativeReferenceName\":\"15-24\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Population by broad age group - Sex: all - Age: 25-64 - Variant: estimates\"}},\"Function\":0},\"Name\":\"Sum(population-by-age-group.Population by broad age group - Sex: all - Age: 25-64 - Variant: estimates)\",\"NativeReferenceName\":\"25-64\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Population by broad age group - Sex: all - Age: 65+ - Variant: estimates\"}},\"Function\":0},\"Name\":\"Sum(population-by-age-group.Population by broad age group - Sex: all - Age: 65+ - Variant: estimates)\",\"NativeReferenceName\":\"65+\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Population by broad age group - Sex: all - Age: 0-4 - Variant: estimates\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(population-by-age-group.Population by broad age group - Sex: all - Age: 0-4 - Variant: estimates)\":{\"displayName\":\"0-4\"},\"Sum(population-by-age-group.Population by broad age group - Sex: all - Age: 15-24 - Variant: estimates)\":{\"displayName\":\"15-24\"},\"Sum(population-by-age-group.Population by broad age group - Sex: all - Age: 25-64 - Variant: estimates)\":{\"displayName\":\"25-64\"},\"Sum(population-by-age-group.Population by broad age group - Sex: all - Age: 5-14 - Variant: estimates)\":{\"displayName\":\"5-14\"},\"Sum(population-by-age-group.Population by broad age group - Sex: all - Age: 65+ - Variant: estimates)\":{\"displayName\":\"65+\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"zoom\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Minimal'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filterdf78684d6a15921051b1\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"population-by-age-group\"}},\"Property\":\"Code\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"population-by-age-group\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Code\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'OWID_WRL'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{}}]}}]",
+          "height": 634.65,
+          "width": 776.08,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"726f2ffa8099e19c0e50\",\"layouts\":[{\"id\":0,\"position\":{\"x\":785.589600742804,\"y\":0,\"z\":1000,\"width\":494.4103992571959,\"height\":634.6518105849582,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(owid-co2-data.coal_co2_per_capita)\"}],\"Category\":[{\"queryRef\":\"Calendar.Year\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"owid-co2-data\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"Calendar\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Year\"},\"Name\":\"Calendar.Year\",\"NativeReferenceName\":\"Year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"coal_co2_per_capita\"}},\"Function\":0},\"Name\":\"Sum(owid-co2-data.coal_co2_per_capita)\",\"NativeReferenceName\":\"Sum of coal_co2_per_capita\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"coal_co2_per_capita\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 634.65,
+          "width": 494.41,
+          "x": 785.59,
+          "y": 0.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 4",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectione42a0c2a9e0f49b03d8b",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"9c8a82cdd2d19dba39a9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":267.2741078208049,\"y\":44.707668944571,\"z\":0,\"width\":828.0637813211846,\"height\":568.5649202733485}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"owid-co2-data.country\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"owid-co2-data\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"country\"},\"Name\":\"owid-co2-data.country\",\"NativeReferenceName\":\"country\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 568.56,
+          "width": 828.06,
+          "x": 267.27,
+          "y": 44.71,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

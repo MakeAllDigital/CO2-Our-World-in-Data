@@ -4,7 +4,7 @@
     "annotations": [
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"antarctic-ozone-hole-area\",\"electricity-prod-source-stacked\",\"global-energy-substitution\",\"global-plastics-production\",\"owid-co2-codebook\",\"owid-co2-data\",\"owid-energy-codebook\",\"owid-energy-data\",\"per-capita-electricity-fossil-nuclear-renewables\",\"population-by-age-group\",\"share-elec-by-source\",\"_METRICAS\"]"
+        "value": "[\"folder\",\"antarctic-ozone-hole-area\",\"electricity-prod-source-stacked\",\"global-energy-substitution\",\"global-plastics-production\",\"owid-co2-codebook\",\"owid-co2-data\",\"owid-energy-codebook\",\"owid-energy-data\",\"per-capita-electricity-fossil-nuclear-renewables\",\"population-by-age-group\",\"share-elec-by-source\",\"_METRICAS\"]"
       },
       {
         "name": "__PBI_TimeIntelligenceEnabled",
@@ -12,7 +12,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.124.1554.0 (23.12)"
+        "value": "2.124.2028.0 (23.12)"
       },
       {
         "name": "PBI_ProTooling",
@@ -38,6 +38,24 @@
       "returnErrorValuesAsNull": true
     },
     "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "folder",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          }
+        ],
+        "expression": "\"C:\\Users\\emanu\\OneDrive\\Documentos\\UpWork\\Projects Portfolio\\CO2 Our World in Data\\data\" meta [IsParameterQuery=true, Type=\"Any\", IsParameterQueryRequired=true]",
+        "kind": "m",
+        "lineageTag": "9281c677-d755-497f-ba67-e5781fc9d25f"
+      }
+    ],
     "relationships": [
       {
         "name": "909298d8-a811-4727-9c2b-4ca80c788fa3",
@@ -339,6 +357,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -419,7 +441,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = Csv.Document(File.Contents(\"C:\\Users\\emanu\\OneDrive\\Documentos\\EstudoPopulação\\antarctic-ozone-hole-area.csv\"),[Delimiter=\",\", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    Source = Csv.Document(File.Contents(folder & \"\\antarctic-ozone-hole-area.csv\"),[Delimiter=\",\", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
                 "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
                 "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Entity\", type text}, {\"Code\", type text}, {\"Year\", Int64.Type}, {\"Maximum ozone hole area\", Int64.Type}, {\"Mean ozone hole area\", Int64.Type}})",
                 "in",
@@ -436,6 +458,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -641,7 +667,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = Csv.Document(File.Contents(\"C:\\Users\\emanu\\OneDrive\\Documentos\\EstudoPopulação\\electricity-prod-source-stacked.csv\"),[Delimiter=\",\", Columns=12, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    Source = Csv.Document(File.Contents(folder & \"\\electricity-prod-source-stacked.csv\"),[Delimiter=\",\", Columns=12, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
                 "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
                 "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Entity\", type text}, {\"Code\", type text}, {\"Year\", Int64.Type}, {\"Other renewables excluding bioenergy (TWh)\", type number}, {\"Electricity from bioenergy (TWh)\", type number}, {\"Electricity from solar (TWh)\", type number}, {\"Electricity from wind (TWh)\", type number}, {\"Electricity from hydro (TWh)\", type number}, {\"Electricity from nuclear (TWh)\", type number}, {\"Electricity from oil (TWh)\", type number}, {\"Electricity from gas (TWh)\", type number}, {\"Electricity from coal (TWh)\", type number}})",
                 "in",
@@ -658,6 +684,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -877,7 +907,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = Csv.Document(File.Contents(\"C:\\Users\\emanu\\OneDrive\\Documentos\\EstudoPopulação\\global-energy-substitution.csv\"),[Delimiter=\",\", Columns=13, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    Source = Csv.Document(File.Contents(folder & \"\\global-energy-substitution.csv\"),[Delimiter=\",\", Columns=13, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
                 "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
                 "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Entity\", type text}, {\"Code\", type text}, {\"Year\", Int64.Type}, {\"Other renewables (TWh, substituted energy)\", type number}, {\"Biofuels (TWh, substituted energy)\", type number}, {\"Solar (TWh, substituted energy)\", type number}, {\"Wind (TWh, substituted energy)\", type number}, {\"Hydropower (TWh, substituted energy)\", type number}, {\"Nuclear (TWh, substituted energy)\", type number}, {\"Gas (TWh, substituted energy)\", type number}, {\"Oil (TWh, substituted energy)\", type number}, {\"Coal (TWh, substituted energy)\", type number}, {\"Traditional biomass (TWh, substituted energy)\", Int64.Type}})",
                 "in",
@@ -894,6 +924,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -980,7 +1014,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = Csv.Document(File.Contents(\"C:\\Users\\emanu\\OneDrive\\Documentos\\EstudoPopulação\\global-plastics-production.csv\"),[Delimiter=\",\", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    Source = Csv.Document(File.Contents(folder & \"\\global-plastics-production.csv\"),[Delimiter=\",\", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
                 "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
                 "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Entity\", type text}, {\"Code\", type text}, {\"Year\", Int64.Type}, {\"Annual plastic production between 1950 and 2019\", type number}, {\"Plastic use - projections\", type number}})",
                 "in",
@@ -997,6 +1031,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -1048,7 +1086,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = Csv.Document(File.Contents(\"C:\\Users\\emanu\\OneDrive\\Documentos\\EstudoPopulação\\owid-co2-codebook.csv\"),[Delimiter=\",\", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Source = Csv.Document(File.Contents(folder & \"\\owid-co2-codebook.csv\"),[Delimiter=\",\", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
                 "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}, {\"Column2\", type text}, {\"Column3\", type text}}),",
                 "    #\"Promoted Headers\" = Table.PromoteHeaders(#\"Changed Type\", [PromoteAllScalars=true]),",
                 "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"column\", type text}, {\"description\", type text}, {\"source\", type text}})",
@@ -1066,6 +1104,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -2407,7 +2449,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = Csv.Document(File.Contents(\"C:\\Users\\emanu\\OneDrive\\Documentos\\EstudoPopulação\\owid-co2-data.csv\"),[Delimiter=\",\", Columns=79, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    Source = Csv.Document(File.Contents(folder & \"\\owid-co2-data.csv\"),[Delimiter=\",\", Columns=79, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
                 "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
                 "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"country\", type text}, {\"year\", Int64.Type}, {\"iso_code\", type text}, {\"population\", Int64.Type}, {\"gdp\", type number}, {\"cement_co2\", type number}, {\"cement_co2_per_capita\", type number}, {\"co2\", type number}, {\"co2_growth_abs\", type number}, {\"co2_growth_prct\", type number}, {\"co2_including_luc\", type number}, {\"co2_including_luc_growth_abs\", type number}, {\"co2_including_luc_growth_prct\", type number}, {\"co2_including_luc_per_capita\", type number}, {\"co2_including_luc_per_gdp\", type number}, {\"co2_including_luc_per_unit_energy\", type number}, {\"co2_per_capita\", type number}, {\"co2_per_gdp\", type number}, {\"co2_per_unit_energy\", type number}, {\"coal_co2\", type number}, {\"coal_co2_per_capita\", type number}, {\"consumption_co2\", type number}, {\"consumption_co2_per_capita\", type number}, {\"consumption_co2_per_gdp\", type number}, {\"cumulative_cement_co2\", type number}, {\"cumulative_co2\", type number}, {\"cumulative_co2_including_luc\", type number}, {\"cumulative_coal_co2\", type number}, {\"cumulative_flaring_co2\", type number}, {\"cumulative_gas_co2\", type number}, {\"cumulative_luc_co2\", type number}, {\"cumulative_oil_co2\", type number}, {\"cumulative_other_co2\", type number}, {\"energy_per_capita\", type number}, {\"energy_per_gdp\", type number}, {\"flaring_co2\", type number}, {\"flaring_co2_per_capita\", type number}, {\"gas_co2\", type number}, {\"gas_co2_per_capita\", type number}, {\"ghg_excluding_lucf_per_capita\", type number}, {\"ghg_per_capita\", type number}, {\"land_use_change_co2\", type number}, {\"land_use_change_co2_per_capita\", type number}, {\"methane\", type number}, {\"methane_per_capita\", type number}, {\"nitrous_oxide\", type number}, {\"nitrous_oxide_per_capita\", type number}, {\"oil_co2\", type number}, {\"oil_co2_per_capita\", type number}, {\"other_co2_per_capita\", type number}, {\"other_industry_co2\", type number}, {\"primary_energy_consumption\", type number}, {\"share_global_cement_co2\", type number}, {\"share_global_co2\", type number}, {\"share_global_co2_including_luc\", type number}, {\"share_global_coal_co2\", type number}, {\"share_global_cumulative_cement_co2\", type number}, {\"share_global_cumulative_co2\", type number}, {\"share_global_cumulative_co2_including_luc\", type number}, {\"share_global_cumulative_coal_co2\", type number}, {\"share_global_cumulative_flaring_co2\", type number}, {\"share_global_cumulative_gas_co2\", type number}, {\"share_global_cumulative_luc_co2\", type number}, {\"share_global_cumulative_oil_co2\", type number}, {\"share_global_cumulative_other_co2\", type number}, {\"share_global_flaring_co2\", type number}, {\"share_global_gas_co2\", type number}, {\"share_global_luc_co2\", type number}, {\"share_global_oil_co2\", type number}, {\"share_global_other_co2\", type number}, {\"share_of_temperature_change_from_ghg\", type number}, {\"temperature_change_from_ch4\", type number}, {\"temperature_change_from_co2\", type number}, {\"temperature_change_from_ghg\", type number}, {\"temperature_change_from_n2o\", type number}, {\"total_ghg\", type number}, {\"total_ghg_excluding_lucf\", type number}, {\"trade_co2\", type number}, {\"trade_co2_share\", type number}})",
                 "in",
@@ -2424,6 +2466,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -2475,7 +2521,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = Csv.Document(File.Contents(\"C:\\Users\\emanu\\OneDrive\\Documentos\\EstudoPopulação\\owid-energy-codebook.csv\"),[Delimiter=\",\", Columns=3, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    Source = Csv.Document(File.Contents(folder & \"\\owid-energy-codebook.csv\"),[Delimiter=\",\", Columns=3, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
                 "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}, {\"Column2\", type text}, {\"Column3\", type text}}),",
                 "    #\"Promoted Headers\" = Table.PromoteHeaders(#\"Changed Type\", [PromoteAllScalars=true]),",
                 "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"column\", type text}, {\"description\", type text}, {\"source\", type text}})",
@@ -2493,6 +2539,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -4680,7 +4730,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = Csv.Document(File.Contents(\"C:\\Users\\emanu\\OneDrive\\Documentos\\EstudoPopulação\\owid-energy-data.csv\"),[Delimiter=\",\", Columns=129, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    Source = Csv.Document(File.Contents(folder & \"\\owid-energy-data.csv\"),[Delimiter=\",\", Columns=129, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
                 "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
                 "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"country\", type text}, {\"year\", Int64.Type}, {\"iso_code\", type text}, {\"population\", Int64.Type}, {\"gdp\", type text}, {\"biofuel_cons_change_pct\", type number}, {\"biofuel_cons_change_twh\", type number}, {\"biofuel_cons_per_capita\", type number}, {\"biofuel_consumption\", type number}, {\"biofuel_elec_per_capita\", type number}, {\"biofuel_electricity\", type number}, {\"biofuel_share_elec\", type number}, {\"biofuel_share_energy\", type number}, {\"carbon_intensity_elec\", type number}, {\"coal_cons_change_pct\", type number}, {\"coal_cons_change_twh\", type number}, {\"coal_cons_per_capita\", type number}, {\"coal_consumption\", type number}, {\"coal_elec_per_capita\", type number}, {\"coal_electricity\", type number}, {\"coal_prod_change_pct\", type number}, {\"coal_prod_change_twh\", type number}, {\"coal_prod_per_capita\", type number}, {\"coal_production\", type number}, {\"coal_share_elec\", type number}, {\"coal_share_energy\", type number}, {\"electricity_demand\", type number}, {\"electricity_generation\", type number}, {\"electricity_share_energy\", type number}, {\"energy_cons_change_pct\", type number}, {\"energy_cons_change_twh\", type number}, {\"energy_per_capita\", type number}, {\"energy_per_gdp\", type number}, {\"fossil_cons_change_pct\", type number}, {\"fossil_cons_change_twh\", type number}, {\"fossil_elec_per_capita\", type number}, {\"fossil_electricity\", type number}, {\"fossil_energy_per_capita\", type number}, {\"fossil_fuel_consumption\", type number}, {\"fossil_share_elec\", type number}, {\"fossil_share_energy\", type number}, {\"gas_cons_change_pct\", type number}, {\"gas_cons_change_twh\", type number}, {\"gas_consumption\", type number}, {\"gas_elec_per_capita\", type number}, {\"gas_electricity\", type number}, {\"gas_energy_per_capita\", type number}, {\"gas_prod_change_pct\", type number}, {\"gas_prod_change_twh\", type number}, {\"gas_prod_per_capita\", type number}, {\"gas_production\", type number}, {\"gas_share_elec\", type number}, {\"gas_share_energy\", type number}, {\"greenhouse_gas_emissions\", type number}, {\"hydro_cons_change_pct\", type number}, {\"hydro_cons_change_twh\", type number}, {\"hydro_consumption\", type number}, {\"hydro_elec_per_capita\", type number}, {\"hydro_electricity\", type number}, {\"hydro_energy_per_capita\", type number}, {\"hydro_share_elec\", type number}, {\"hydro_share_energy\", type number}, {\"low_carbon_cons_change_pct\", type number}, {\"low_carbon_cons_change_twh\", type number}, {\"low_carbon_consumption\", type number}, {\"low_carbon_elec_per_capita\", type number}, {\"low_carbon_electricity\", type number}, {\"low_carbon_energy_per_capita\", type number}, {\"low_carbon_share_elec\", type number}, {\"low_carbon_share_energy\", type number}, {\"net_elec_imports\", type number}, {\"net_elec_imports_share_demand\", type number}, {\"nuclear_cons_change_pct\", type number}, {\"nuclear_cons_change_twh\", type number}, {\"nuclear_consumption\", type number}, {\"nuclear_elec_per_capita\", type number}, {\"nuclear_electricity\", type number}, {\"nuclear_energy_per_capita\", type number}, {\"nuclear_share_elec\", type number}, {\"nuclear_share_energy\", type number}, {\"oil_cons_change_pct\", type number}, {\"oil_cons_change_twh\", type number}, {\"oil_consumption\", type number}, {\"oil_elec_per_capita\", type number}, {\"oil_electricity\", type number}, {\"oil_energy_per_capita\", type number}, {\"oil_prod_change_pct\", type number}, {\"oil_prod_change_twh\", type number}, {\"oil_prod_per_capita\", type number}, {\"oil_production\", type number}, {\"oil_share_elec\", type number}, {\"oil_share_energy\", type number}, {\"other_renewable_consumption\", type number}, {\"other_renewable_electricity\", type number}, {\"other_renewable_exc_biofuel_electricity\", type number}, {\"other_renewables_cons_change_pct\", type number}, {\"other_renewables_cons_change_twh\", type number}, {\"other_renewables_elec_per_capita\", type number}, {\"other_renewables_elec_per_capita_exc_biofuel\", type number}, {\"other_renewables_energy_per_capita\", type number}, {\"other_renewables_share_elec\", type number}, {\"other_renewables_share_elec_exc_biofuel\", type number}, {\"other_renewables_share_energy\", type number}, {\"per_capita_electricity\", type number}, {\"primary_energy_consumption\", type number}, {\"renewables_cons_change_pct\", type number}, {\"renewables_cons_change_twh\", type number}, {\"renewables_consumption\", type number}, {\"renewables_elec_per_capita\", type number}, {\"renewables_electricity\", type number}, {\"renewables_energy_per_capita\", type number}, {\"renewables_share_elec\", type number}, {\"renewables_share_energy\", type number}, {\"solar_cons_change_pct\", type number}, {\"solar_cons_change_twh\", type number}, {\"solar_consumption\", type number}, {\"solar_elec_per_capita\", type number}, {\"solar_electricity\", type number}, {\"solar_energy_per_capita\", type number}, {\"solar_share_elec\", type number}, {\"solar_share_energy\", type number}, {\"wind_cons_change_pct\", type number}, {\"wind_cons_change_twh\", type number}, {\"wind_consumption\", type number}, {\"wind_elec_per_capita\", type number}, {\"wind_electricity\", type number}, {\"wind_energy_per_capita\", type number}, {\"wind_share_elec\", type number}, {\"wind_share_energy\", type number}})",
                 "in",
@@ -4697,6 +4747,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -4800,7 +4854,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = Csv.Document(File.Contents(\"C:\\Users\\emanu\\OneDrive\\Documentos\\EstudoPopulação\\per-capita-electricity-fossil-nuclear-renewables.csv\"),[Delimiter=\",\", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    Source = Csv.Document(File.Contents(folder & \"\\per-capita-electricity-fossil-nuclear-renewables.csv\"),[Delimiter=\",\", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
                 "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
                 "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Entity\", type text}, {\"Code\", type text}, {\"Year\", Int64.Type}, {\"Fossil fuel electricity per capita (kWh)\", type number}, {\"Nuclear electricity per capita (kWh)\", type number}, {\"Renewable electricity per capita (kWh)\", type number}})",
                 "in",
@@ -4817,6 +4871,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -4939,7 +4997,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = Csv.Document(File.Contents(\"C:\\Users\\emanu\\OneDrive\\Documentos\\EstudoPopulação\\population-by-age-group.csv\"),[Delimiter=\",\", Columns=8, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    Source = Csv.Document(File.Contents(folder & \"\\population-by-age-group.csv\"),[Delimiter=\",\", Columns=8, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
                 "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
                 "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Entity\", type text}, {\"Code\", type text}, {\"Year\", Int64.Type}, {\"Population by broad age group - Sex: all - Age: 65+ - Variant: estimates\", Int64.Type}, {\"Population by broad age group - Sex: all - Age: 25-64 - Variant: estimates\", Int64.Type}, {\"Population by broad age group - Sex: all - Age: 15-24 - Variant: estimates\", Int64.Type}, {\"Population by broad age group - Sex: all - Age: 5-14 - Variant: estimates\", Int64.Type}, {\"Population by broad age group - Sex: all - Age: 0-4 - Variant: estimates\", Int64.Type}})",
                 "in",
@@ -4956,6 +5014,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -5161,7 +5223,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Source = Csv.Document(File.Contents(\"C:\\Users\\emanu\\OneDrive\\Documentos\\EstudoPopulação\\share-elec-by-source.csv\"),[Delimiter=\",\", Columns=12, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    Source = Csv.Document(File.Contents(folder & \"\\share-elec-by-source.csv\"),[Delimiter=\",\", Columns=12, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
                 "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
                 "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Entity\", type text}, {\"Code\", type text}, {\"Year\", Int64.Type}, {\"Coal (% electricity)\", type number}, {\"Gas (% electricity)\", type number}, {\"Hydro (% electricity)\", type number}, {\"Solar (% electricity)\", type number}, {\"Wind (% electricity)\", type number}, {\"Oil (% electricity)\", type number}, {\"Nuclear (% electricity)\", type number}, {\"Other renewables excluding bioenergy (% electricity)\", type number}, {\"Bioenergy (% electricity)\", type number}})",
                 "in",

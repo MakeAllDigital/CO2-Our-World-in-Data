@@ -36,13 +36,22 @@
           "z": 0.00
         },
         {
-          "config": "{\"name\":\"3bb32d057680eec9c20a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":183.69020501138954,\"y\":0,\"z\":1000,\"width\":741.564160971906,\"height\":471.3743356112377}}],\"singleVisual\":{\"visualType\":\"areaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"antarctic-ozone-hole-area.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(antarctic-ozone-hole-area.Maximum ozone hole area)\"}],\"Y2\":[{\"queryRef\":\"Sum(antarctic-ozone-hole-area.Mean ozone hole area)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"antarctic-ozone-hole-area\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Year\"},\"Name\":\"antarctic-ozone-hole-area.Year\",\"NativeReferenceName\":\"Year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Maximum ozone hole area\"}},\"Function\":0},\"Name\":\"Sum(antarctic-ozone-hole-area.Maximum ozone hole area)\",\"NativeReferenceName\":\"Sum of Maximum ozone hole area\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Mean ozone hole area\"}},\"Function\":0},\"Name\":\"Sum(antarctic-ozone-hole-area.Mean ozone hole area)\",\"NativeReferenceName\":\"Sum of Mean ozone hole area\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Maximum ozone hole area\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"3bb32d057680eec9c20a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":183.5820895522388,\"y\":0,\"z\":1000,\"width\":500.5970149253731,\"height\":399.4029850746269}}],\"singleVisual\":{\"visualType\":\"areaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"antarctic-ozone-hole-area.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(antarctic-ozone-hole-area.Maximum ozone hole area)\"}],\"Y2\":[{\"queryRef\":\"Sum(antarctic-ozone-hole-area.Mean ozone hole area)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"antarctic-ozone-hole-area\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Year\"},\"Name\":\"antarctic-ozone-hole-area.Year\",\"NativeReferenceName\":\"Year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Maximum ozone hole area\"}},\"Function\":0},\"Name\":\"Sum(antarctic-ozone-hole-area.Maximum ozone hole area)\",\"NativeReferenceName\":\"Sum of Maximum ozone hole area\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Mean ozone hole area\"}},\"Function\":0},\"Name\":\"Sum(antarctic-ozone-hole-area.Mean ozone hole area)\",\"NativeReferenceName\":\"Sum of Mean ozone hole area\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Maximum ozone hole area\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
-          "height": 471.37,
-          "width": 741.56,
-          "x": 183.69,
+          "height": 399.40,
+          "width": 500.60,
+          "x": 183.58,
           "y": 0.00,
           "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"62f0d3a8f041cb79ee4e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":757.6119402985074,\"y\":309.85074626865674,\"z\":1001,\"width\":500.5970149253731,\"height\":399.4029850746269}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"antarctic-ozone-hole-area.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(antarctic-ozone-hole-area.Maximum ozone hole area)\"},{\"queryRef\":\"Sum(antarctic-ozone-hole-area.Mean ozone hole area)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"antarctic-ozone-hole-area\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Year\"},\"Name\":\"antarctic-ozone-hole-area.Year\",\"NativeReferenceName\":\"Year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Maximum ozone hole area\"}},\"Function\":0},\"Name\":\"Sum(antarctic-ozone-hole-area.Maximum ozone hole area)\",\"NativeReferenceName\":\"Sum of Maximum ozone hole area\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Mean ozone hole area\"}},\"Function\":0},\"Name\":\"Sum(antarctic-ozone-hole-area.Mean ozone hole area)\",\"NativeReferenceName\":\"Sum of Mean ozone hole area\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Maximum ozone hole area\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 399.40,
+          "width": 500.60,
+          "x": 757.61,
+          "y": 309.85,
+          "z": 1001.00
         }
       ],
       "width": 1280.00
